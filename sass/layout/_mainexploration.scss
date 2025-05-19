@@ -1,0 +1,30 @@
+@use "../utils/_boxshadow"; /*mixin de box shadow*/
+/********sous titre et exploration********/
+.explorer {
+  text-align: center;
+  & h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+  & p {
+      font-size: 1rem;
+    }
+    & button {
+        color: white;
+        font-weight: 300;
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 2rem;
+        @include boxshadow.base-shadow;
+        background-image: linear-gradient(to top, #9356dc, #ff79da);
+        transition: transform 200ms; /*vitesse du zoom*/
+        margin-top: 1.5rem;
+    }
+    & button:hover { /*effet de zoom sur le boutton*/
+        transform: scale(1.02);
+        opacity: 0.9;
+    }
+}

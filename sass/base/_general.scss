@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+*,
+::before,
+::after {
+    box-sizing: border-box; /* Évite que les bordures et
+  les paddings ne "débordent" 
+  en augmentant la taille totale d'un élément. */
+}
+  /*******Titre du site*********/
+ 
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+main {
+  padding: 0 7rem;
+}
+h2{
+  margin: 2rem 0;
+  margin: 0;
+}

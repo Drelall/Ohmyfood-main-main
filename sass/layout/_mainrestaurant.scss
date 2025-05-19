@@ -1,0 +1,27 @@
+@use "../utils/variables"; /*mixin de box shadow*/
+/***********restaurant*************/
+.menus {
+  background-color: #f6f6f6;
+  h2 {
+    margin-bottom: 2rem;
+  }
+  .menucarte {
+    display: grid;
+    grid-template-columns:repeat( 2, 1fr);
+    gap: 2rem;
+    @media (max-width: variables.$menu-carte) {
+      grid-template-columns:repeat( 1, 1fr);
+    }
+  }
+  .carte {
+    & .menuimage{
+    background-image: url("../../images/restaurants/menu-un.jpg");
+    height: 15rem;
+    background-size: cover;
+    border: 1px solid #9356dc;
+    border-radius: 1rem;
+  }
+  }
+}
+
+
