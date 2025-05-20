@@ -143,10 +143,11 @@ si position absolute dans le before*/
 }
 
 /*mixin de box shadow*/
-/*mixin de box shadow*/
+/*couleurs*/
 /***********restaurant*************/
 .menus {
   background-color: #f6f6f6;
+  margin-bottom: 2rem;
 }
 .menus .menudescription {
   position: relative; /*déplace le coeur*/
@@ -180,6 +181,8 @@ si position absolute dans le before*/
 }
 .menus .cartenouveau { /* cette partie permet d'intégrer nouveau*/
   position: relative;
+  background-color: #ffffff; /*fond blanc de la carte*/
+  border-radius: 1rem;
 }
 .menus .cartenouveau::before { /* cette partie permet d'intégrer nouveau*/
   content: "Nouveau";
@@ -198,6 +201,7 @@ si position absolute dans le before*/
   background-image: url("../../assets/images/restaurants/menuun.jpg");
   height: 15rem;
   background-size: cover;
+  background-position: center;
   border-radius: 1rem 1rem 0 0;
 }
 .menus .cartenouveau .menuimagedeux {
@@ -206,6 +210,10 @@ si position absolute dans le before*/
   background-size: cover;
   background-position: center;
   border-radius: 1rem 1rem 0 0;
+}
+.menus .carte {
+  background-color: #ffffff; /*fond blanc de la carte*/
+  border-radius: 1rem;
 }
 .menus .carte .menuimagetrois {
   background-image: url("../../assets/images/restaurants/menutrois.jpg");
@@ -220,6 +228,17 @@ si position absolute dans le before*/
   background-size: cover;
   background-position: center;
   border-radius: 1rem 1rem 0 0;
+}
+
+/*couleurs*/
+footer {
+  background-color: #353535;
+  padding: 0 2rem;
+}
+footer h2 {
+  font-family: shrikhand;
+  color: white; /*couleur du texte*/
+  font-weight: 500; /*rend les lettres moins épaisses*/
 }
 
 

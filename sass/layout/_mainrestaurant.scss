@@ -1,8 +1,9 @@
 @use "../utils/variables"; /*mixin de box shadow*/
-@use "../utils/colors"; /*mixin de box shadow*/
+@use "../utils/colors"; /*couleurs*/
 /***********restaurant*************/
 .menus {
   background-color: #f6f6f6;
+  margin-bottom: 2rem;
 & .menudescription{
   position: relative;/*déplace le coeur*/
     h3,
@@ -28,12 +29,15 @@
     display: grid;
     grid-template-columns:repeat( 2, 1fr);
     gap: 2rem;
+    
     @media (max-width: variables.$menu-carte) {
       grid-template-columns:repeat( 1, 1fr);
     }
   }
   .cartenouveau {/* cette partie permet d'intégrer nouveau*/
-    position :relative;
+  position :relative;
+  background-color: #ffffff;/*fond blanc de la carte*/
+  border-radius: 1rem;
   &::before{/* cette partie permet d'intégrer nouveau*/
       content : "Nouveau";
       position : absolute;
@@ -52,6 +56,7 @@
   background-image: url("../../assets/images/restaurants/menuun.jpg");
   height: 15rem;
   background-size: cover;
+  background-position: center;
   border-radius: 1rem 1rem 0 0;
     }
   & .menuimagedeux{
@@ -63,6 +68,8 @@
   }
 }
   .carte{
+  background-color: #ffffff;/*fond blanc de la carte*/
+  border-radius: 1rem;
   & .menuimagetrois{
   background-image: url("../../assets/images/restaurants/menutrois.jpg");
   height: 15rem;

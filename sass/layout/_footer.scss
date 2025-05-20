@@ -1,0 +1,11 @@
+@use "../utils/colors"; /*couleurs*/
+footer {
+    background-color: colors.$black-footer;
+    padding:0 2rem;
+    h2 {
+        font-family: shrikhand;
+        color: white;/*couleur du texte*/
+        font-weight: 500;/*rend les lettres moins épaisses*/
+    }
+   
+}
