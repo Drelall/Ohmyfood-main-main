@@ -1,4 +1,5 @@
 @use "../utils/variables"; /*mixin de box shadow*/
+@use "../utils/colors"; /*mixin de box shadow*/
 /***********restaurant*************/
 .menus {
   background-color: #f6f6f6;
@@ -13,9 +14,23 @@
       grid-template-columns:repeat( 1, 1fr);
     }
   }
-  .cartenouveau {
-    border: 1px solid red;
-  & .menuimageun{
+  .cartenouveau {/* cette partie permet d'intégrer nouveau*/
+    position :relative;
+  &::before{/* cette partie permet d'intégrer nouveau*/
+      content : "Nouveau";
+      position : absolute;
+      height: 2rem;
+      width: 5rem;
+      background-color: colors.$tertiaire;
+      color: darken(colors.$tertiaire, $amount: 50%); /*permet de garder la même couleur pour le texte en l'assombrissant*/
+      display: grid; /* ajuste le texte verticalement*/
+      place-items: center;/*centre le texte*/
+      right: 1rem;/*place le texte nouveau dans la bonne partie de la carte*/
+      top:1rem;/*place le texte nouveau dans la bonne partie de la carte*/
+      border-radius: 0.2rem;
+      
+    }
+  & .menuimageun{/*les cartes*/
   background-image: url("../../assets/images/restaurants/menuun.jpg");
   height: 15rem;
   background-size: cover;
