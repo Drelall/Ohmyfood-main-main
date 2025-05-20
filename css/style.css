@@ -156,26 +156,14 @@ si position absolute dans le before*/
   background-size: cover;
   border-radius: 1rem;
 }
-.menus .carte .menuimagedeux {
+.menus .carte .menuimagdeux {
   background-image: url("../../assets/images/restaurants/menudeux.jpg");
-  height: 15rem;
-  background-size: cover;
-  background-position: center;
-  border-radius: 1rem;
 }
-.menus .carte .menuimagetrois {
+.menus .carte .menuimagtrois {
   background-image: url("../../assets/images/restaurants/menutrois.jpg");
-  height: 15rem;
-  background-size: cover;
-  background-position: center;
-  border-radius: 1rem;
 }
-.menus .carte .menuimagequatre {
+.menus .carte .menuimagquatre {
   background-image: url("../../assets/images/restaurants/menuquatre.jpg");
-  height: 15rem;
-  background-size: cover;
-  background-position: center;
-  border-radius: 1rem;
 }
 
 
