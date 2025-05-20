@@ -22,6 +22,16 @@ h2 {
   margin: 0;
 }
 
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none; /*permet aulien de ne pas être en surbrillance*/
+  color: inherit; /*permet aulien de ne pas être en surbrillance*/
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -138,6 +148,23 @@ si position absolute dans le before*/
 .menus {
   background-color: #f6f6f6;
 }
+.menus .menudescription {
+  position: relative; /*déplace le coeur*/
+}
+.menus .menudescription h3,
+.menus .menudescription p {
+  margin: 0.5rem; /*place les marges pour les sous titres*/
+}
+.menus .menudescription h3 {
+  padding-top: 0.5rem;
+}
+.menus .menudescription i {
+  font-size: 2rem; /*change la taille du coeur*/
+  position: absolute; /*déplace le coeur*/
+  right: 1rem; /*déplace le coeur*/
+  top: 50%; /*déplace et centre le coeur*/
+  transform: translateY(-50%); /*déplace et centre le coeur*/
+}
 .menus h2 {
   margin-bottom: 2rem;
 }
@@ -171,28 +198,28 @@ si position absolute dans le before*/
   background-image: url("../../assets/images/restaurants/menuun.jpg");
   height: 15rem;
   background-size: cover;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 .menus .cartenouveau .menuimagedeux {
   background-image: url("../../assets/images/restaurants/menudeux.jpg");
   height: 15rem;
   background-size: cover;
   background-position: center;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 .menus .carte .menuimagetrois {
   background-image: url("../../assets/images/restaurants/menutrois.jpg");
   height: 15rem;
   background-size: cover;
   background-position: center;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 .menus .carte .menuimagequatre {
   background-image: url("../../assets/images/restaurants/menuquatre.jpg");
   height: 15rem;
   background-size: cover;
   background-position: center;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 
 

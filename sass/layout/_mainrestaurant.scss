@@ -3,6 +3,24 @@
 /***********restaurant*************/
 .menus {
   background-color: #f6f6f6;
+& .menudescription{
+  position: relative;/*déplace le coeur*/
+    h3,
+    p {
+      margin: 0.5rem;/*place les marges pour les sous titres*/
+      
+    }
+    h3{
+      padding-top: 0.5rem ;
+    }
+    i {
+      font-size: 2rem;/*change la taille du coeur*/
+      position: absolute;/*déplace le coeur*/
+      right: 1rem;/*déplace le coeur*/
+      top: 50%;/*déplace et centre le coeur*/
+      transform: translateY(-50%);/*déplace et centre le coeur*/
+    }
+}
   h2 {
     margin-bottom: 2rem;
   }
@@ -34,14 +52,14 @@
   background-image: url("../../assets/images/restaurants/menuun.jpg");
   height: 15rem;
   background-size: cover;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
     }
   & .menuimagedeux{
   background-image: url("../../assets/images/restaurants/menudeux.jpg");
   height: 15rem;
   background-size: cover;
   background-position: center;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
   }
 }
   .carte{
@@ -50,16 +68,17 @@
   height: 15rem;
   background-size: cover;
   background-position: center;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
   }
   & .menuimagequatre{
   background-image: url("../../assets/images/restaurants/menuquatre.jpg");
   height: 15rem;
   background-size: cover;
   background-position: center;
-  border-radius: 1rem;
-  }
+  border-radius: 1rem 1rem 0 0;
   }
 }
+}
+
 
 
