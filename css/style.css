@@ -150,20 +150,35 @@ si position absolute dans le before*/
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.menus .carte .menuimageun {
+.menus .cartenouveau {
+  border: 1px solid red;
+}
+.menus .cartenouveau .menuimageun {
   background-image: url("../../assets/images/restaurants/menuun.jpg");
   height: 15rem;
   background-size: cover;
   border-radius: 1rem;
 }
-.menus .carte .menuimagdeux {
+.menus .cartenouveau .menuimagedeux {
   background-image: url("../../assets/images/restaurants/menudeux.jpg");
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
 }
-.menus .carte .menuimagtrois {
+.menus .carte .menuimagetrois {
   background-image: url("../../assets/images/restaurants/menutrois.jpg");
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
 }
-.menus .carte .menuimagquatre {
+.menus .carte .menuimagequatre {
   background-image: url("../../assets/images/restaurants/menuquatre.jpg");
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
 }
 
 
