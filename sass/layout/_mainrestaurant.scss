@@ -14,12 +14,32 @@
     }
   }
   .carte {
-    & .menuimageun{
-    background-image: url("../../assets/images/restaurants/menuun.jpg");
-    height: 15rem;
-    background-size: cover;
-    border: 1px solid #9356dc;
-    border-radius: 1rem;
+  & .menuimageun{
+  background-image: url("../../assets/images/restaurants/menuun.jpg");
+  height: 15rem;
+  background-size: cover;
+  border-radius: 1rem;
+    }
+  & .menuimagedeux{
+  background-image: url("../../assets/images/restaurants/menudeux.jpg");
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  }
+  & .menuimagetrois{
+  background-image: url("../../assets/images/restaurants/menutrois.jpg");
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  }
+  & .menuimagequatre{
+  background-image: url("../../assets/images/restaurants/menuquatre.jpg");
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
   }
   }
 }
