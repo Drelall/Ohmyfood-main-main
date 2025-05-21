@@ -97,23 +97,24 @@ header {
 /*mixin de variables*/
 /*mixin de colors*/
 /********fonctionnement********/
-.fonctionnement {
+.contenainer {
+  background-color: white;
+}
+.contenainer .fonctionnement {
   counter-reset: numero; /*créé un compteur sur chaque onglet, 
 permet d'ajouter d'autre compteur à partir du html*/
-  background-color: white;
-  padding: 2rem 1rem;
 }
-.fonctionnement ol {
+.contenainer .fonctionnement ol {
   display: flex;
   gap: 2rem;
   padding: 0;
 }
 @media (max-width: 768px) {
-  .fonctionnement ol {
+  .contenainer .fonctionnement ol {
     flex-direction: column;
   }
 }
-.fonctionnement li {
+.contenainer .fonctionnement li {
   position: relative; /*à mettre dans le parent 
 si position absolute dans le before*/
   list-style-type: none;
@@ -124,7 +125,7 @@ si position absolute dans le before*/
   box-shadow: 2px 1px 7px -3px #000000;
   /*mixin de box shadow*/
 }
-.fonctionnement li::before { /*ajoute un chiffre avant chaque onglet*/
+.contenainer .fonctionnement li::before { /*ajoute un chiffre avant chaque onglet*/
   content: counter(numero);
   counter-increment: numero;
   color: white;
@@ -139,11 +140,11 @@ si position absolute dans le before*/
   transform: translateY(50%);
   left: -1rem;
 }
-.fonctionnement li:hover {
+.contenainer .fonctionnement li:hover {
   transform: scale(1.02); /*effet de zoom sur le boutton*/
   /*mixin de transform*/
 }
-.fonctionnement li i.fas {
+.contenainer .fonctionnement li i.fas {
   color: #9356dc;
   margin-right: 1rem;
 }
@@ -251,6 +252,8 @@ main .menus .carte .menuimagequatre {
 
 /*couleurs*/
 footer {
+  display: flex;
+  flex-direction: column;
   background-color: #353535;
   padding: 1 2rem;
   color: white; /*couleur du texte*/
@@ -262,6 +265,13 @@ footer h2 {
 }
 footer p {
   padding: 0.2rem;
+}
+@media (min-width: 1440px) {
+  footer .basdepage {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 
 

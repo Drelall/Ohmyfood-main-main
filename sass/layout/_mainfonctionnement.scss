@@ -4,11 +4,12 @@
 
 
 /********fonctionnement********/
+.contenainer {
+   background-color: white;
 .fonctionnement{
     counter-reset: numero; /*créé un compteur sur chaque onglet, 
     permet d'ajouter d'autre compteur à partir du html*/
-    background-color: white;
-    padding: 2rem 1rem;
+   
     & ol {
         display: flex;
         gap: 2rem;
@@ -49,6 +50,7 @@
       margin-right: 1rem;
     }
     }
+}
 }
 
 
