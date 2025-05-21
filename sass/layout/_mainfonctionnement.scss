@@ -7,6 +7,8 @@
 .fonctionnement{
     counter-reset: numero; /*créé un compteur sur chaque onglet, 
     permet d'ajouter d'autre compteur à partir du html*/
+    background-color: white;
+    padding: 2rem;
     & ol {
         display: flex;
         gap: 2rem;

@@ -63,11 +63,12 @@ header {
 /********sous titre et exploration********/
 .explorer {
   text-align: center;
+  padding-bottom: 2rem;
 }
 .explorer h2 {
   font-size: 3rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   font-size: 2rem;
 }
 .explorer p {
@@ -100,6 +101,8 @@ header {
 .fonctionnement {
   counter-reset: numero; /*créé un compteur sur chaque onglet, 
 permet d'ajouter d'autre compteur à partir du html*/
+  background-color: white;
+  padding: 2rem;
 }
 .fonctionnement ol {
   display: flex;
@@ -149,9 +152,11 @@ si position absolute dans le before*/
 /*couleurs*/
 /*mixin gradient*/
 /***********restaurant*************/
-main .menus {
+main {
   background-color: #f6f6f6;
-  margin-bottom: 2rem;
+}
+main .menus {
+  padding-bottom: 2rem;
 }
 main .menus .menudescription {
   position: relative; /*déplace le coeur*/
@@ -181,6 +186,7 @@ main .menus .menudescription:hover .fa-solid { /* modif de l'apparence du coeur,
 }
 main .menus h2 {
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 main .menus .menucarte {
   display: grid;

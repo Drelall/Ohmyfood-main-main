@@ -3,9 +3,9 @@
 @use "../utils/_mixins"; /*mixin gradient*/
 /***********restaurant*************/
 main {
+  background-color: #f6f6f6;
   .menus {
-background-color: #f6f6f6;
-margin-bottom: 2rem;
+padding-bottom: 2rem;
 & .menudescription{
   position: relative;/*déplace le coeur*/
     p, 
@@ -34,6 +34,7 @@ margin-bottom: 2rem;
 }
   h2 {
     margin-bottom: 2rem;
+    margin-top: 2rem;
   }
   .menucarte {
     display: grid;
