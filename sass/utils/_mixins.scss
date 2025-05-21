@@ -1,0 +1,9 @@
+@mixin base-shadow {
+    box-shadow: 2px 1px 7px -3px #000000;
+}
+@mixin gradient{
+   background-image: linear-gradient(to top, #9356dc, #ff79da); 
+}
+@mixin transform-zoom{
+    transform: scale(1.02); /*effet de zoom sur le boutton*/
+}

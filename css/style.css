@@ -60,8 +60,6 @@ header {
   font-size: 1.5rem;
 }
 
-/*mixin de box shadow*/
-/*mixin gradient*/
 /********sous titre et exploration********/
 .explorer {
   text-align: center;
@@ -93,7 +91,6 @@ header {
 }
 
 /*mixin de box shadow*/
-/*mixin de transform*/
 /******variables*********/
 /*valeurs réutilisables,*/
 /*media*/
@@ -152,25 +149,27 @@ si position absolute dans le before*/
 /*couleurs*/
 /*mixin gradient*/
 /***********restaurant*************/
-.menus {
+main {
   background-color: #f6f6f6;
+}
+main .menus {
   margin-bottom: 2rem;
 }
-.menus .menudescription {
+main .menus .menudescription {
   position: relative; /*déplace le coeur*/
 }
-.menus .menudescription p,
-.menus .menudescription h3 {
+main .menus .menudescription p,
+main .menus .menudescription h3 {
   padding: 0.3rem;
 }
-.menus .menudescription i {
+main .menus .menudescription i {
   font-size: 2rem; /*change la taille du coeur*/
   position: absolute; /*déplace le coeur*/
   right: 1rem; /*déplace le coeur*/
   top: 50%; /*déplace et centre le coeur*/
   transform: translateY(-50%); /*déplace et centre le coeur*/
 }
-.menus .menudescription .fa-solid { /* modif de l'apparence du coeur, transition*/
+main .menus .menudescription .fa-solid { /* modif de l'apparence du coeur, transition*/
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -178,29 +177,29 @@ si position absolute dans le before*/
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
-.menus .menudescription:hover .fa-solid { /* modif de l'apparence du coeur, transition*/
+main .menus .menudescription:hover .fa-solid { /* modif de l'apparence du coeur, transition*/
   opacity: 1; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
   transform: translateY(-50%) scale(1.2); /*déplace et centre le coeur*/
 }
-.menus h2 {
+main .menus h2 {
   margin-bottom: 2rem;
 }
-.menus .menucarte {
+main .menus .menucarte {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 @media (max-width: 768px) {
-  .menus .menucarte {
+  main .menus .menucarte {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.menus .cartenouveau { /* cette partie permet d'intégrer nouveau*/
+main .menus .cartenouveau { /* cette partie permet d'intégrer nouveau*/
   position: relative;
   background-color: #ffffff; /*fond blanc de la carte*/
   border-radius: 1rem;
 }
-.menus .cartenouveau::before { /* cette partie permet d'intégrer nouveau*/
+main .menus .cartenouveau::before { /* cette partie permet d'intégrer nouveau*/
   content: "Nouveau";
   position: absolute;
   height: 2rem;
@@ -213,32 +212,32 @@ si position absolute dans le before*/
   top: 1rem; /*place le texte nouveau dans la bonne partie de la carte*/
   border-radius: 0.2rem;
 }
-.menus .cartenouveau .menuimageun { /*les cartes*/
+main .menus .cartenouveau .menuimageun { /*les cartes*/
   background-image: url("../../assets/images/restaurants/menuun.jpg");
   height: 15rem;
   background-size: cover;
   background-position: center;
   border-radius: 1rem 1rem 0 0;
 }
-.menus .cartenouveau .menuimagedeux {
+main .menus .cartenouveau .menuimagedeux {
   background-image: url("../../assets/images/restaurants/menudeux.jpg");
   height: 15rem;
   background-size: cover;
   background-position: center;
   border-radius: 1rem 1rem 0 0;
 }
-.menus .carte {
+main .menus .carte {
   background-color: #ffffff; /*fond blanc de la carte*/
   border-radius: 1rem;
 }
-.menus .carte .menuimagetrois {
+main .menus .carte .menuimagetrois {
   background-image: url("../../assets/images/restaurants/menutrois.jpg");
   height: 15rem;
   background-size: cover;
   background-position: center;
   border-radius: 1rem 1rem 0 0;
 }
-.menus .carte .menuimagequatre {
+main .menus .carte .menuimagequatre {
   background-image: url("../../assets/images/restaurants/menuquatre.jpg");
   height: 15rem;
   background-size: cover;

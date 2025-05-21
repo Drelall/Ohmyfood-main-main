@@ -1,5 +1,4 @@
-@use "../utils/_boxshadow"; /*mixin de box shadow*/
-@use "../utils/_linear-gradient"; /*mixin gradient*/
+@use "../utils/_mixins"; 
 /********sous titre et exploration********/
 .explorer {
   text-align: center;
@@ -19,8 +18,8 @@
         padding: 1rem 2rem;
         border: none;
         border-radius: 2rem;
-        @include boxshadow.base-shadow;
-        @include linear-gradient.gradient;
+        @include mixins.base-shadow;
+        @include mixins.gradient;
         transition: transform 200ms; /*vitesse du zoom*/
         margin-top: 1.5rem;
     }

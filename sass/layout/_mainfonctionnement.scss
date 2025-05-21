@@ -1,5 +1,4 @@
-@use "../utils/_boxshadow"; /*mixin de box shadow*/
-@use "../utils/_zoom";/*mixin de transform*/
+@use "../utils/_mixins"; /*mixin de box shadow*/
 @use "../utils/_variables";/*mixin de variables*/
 @use "../utils/_colors"; /*mixin de colors*/
 
@@ -38,9 +37,9 @@
       padding: 1.5rem 2rem;
       flex-grow: 1;
       border-radius: 1rem;
-      @include boxshadow.base-shadow; /*mixin de box shadow*/
+      @include mixins.base-shadow; /*mixin de box shadow*/
       &:hover {
-        @include zoom.transform-zoom; /*mixin de transform*/
+        @include mixins.transform-zoom; /*mixin de transform*/
     }
     i.fas {
       color: colors.$purple;
