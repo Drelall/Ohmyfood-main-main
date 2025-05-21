@@ -149,10 +149,8 @@ si position absolute dans le before*/
 /*couleurs*/
 /*mixin gradient*/
 /***********restaurant*************/
-main {
-  background-color: #f6f6f6;
-}
 main .menus {
+  background-color: #f6f6f6;
   margin-bottom: 2rem;
 }
 main .menus .menudescription {
