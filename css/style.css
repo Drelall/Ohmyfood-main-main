@@ -16,6 +16,11 @@ body {
 main {
   padding: 0 7rem;
 }
+@media (max-width: 768px) {
+  main {
+    padding: 0 1rem;
+  }
+}
 
 h2 {
   margin: 2rem 0;
@@ -56,6 +61,7 @@ header {
 }
 
 /*mixin de box shadow*/
+/*mixin gradient*/
 /********sous titre et exploration********/
 .explorer {
   text-align: center;
@@ -144,6 +150,7 @@ si position absolute dans le before*/
 
 /*mixin de box shadow*/
 /*couleurs*/
+/*mixin gradient*/
 /***********restaurant*************/
 .menus {
   background-color: #f6f6f6;
@@ -152,12 +159,9 @@ si position absolute dans le before*/
 .menus .menudescription {
   position: relative; /*déplace le coeur*/
 }
-.menus .menudescription h3,
-.menus .menudescription p {
-  margin: 0.5rem; /*place les marges pour les sous titres*/
-}
+.menus .menudescription p,
 .menus .menudescription h3 {
-  padding-top: 0.5rem;
+  padding: 0.3rem;
 }
 .menus .menudescription i {
   font-size: 2rem; /*change la taille du coeur*/
@@ -165,6 +169,18 @@ si position absolute dans le before*/
   right: 1rem; /*déplace le coeur*/
   top: 50%; /*déplace et centre le coeur*/
   transform: translateY(-50%); /*déplace et centre le coeur*/
+}
+.menus .menudescription .fa-solid { /* modif de l'apparence du coeur, transition*/
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+}
+.menus .menudescription:hover .fa-solid { /* modif de l'apparence du coeur, transition*/
+  opacity: 1; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
+  transform: translateY(-50%) scale(1.2); /*déplace et centre le coeur*/
 }
 .menus h2 {
   margin-bottom: 2rem;
@@ -233,12 +249,16 @@ si position absolute dans le before*/
 /*couleurs*/
 footer {
   background-color: #353535;
-  padding: 0 2rem;
+  padding: 1 2rem;
+  color: white; /*couleur du texte*/
 }
 footer h2 {
   font-family: shrikhand;
-  color: white; /*couleur du texte*/
   font-weight: 500; /*rend les lettres moins épaisses*/
+  padding: 1rem 0;
+}
+footer p {
+  padding: 0.2rem;
 }
 
 

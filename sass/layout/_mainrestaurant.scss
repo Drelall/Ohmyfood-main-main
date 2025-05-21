@@ -1,18 +1,15 @@
 @use "../utils/variables"; /*mixin de box shadow*/
 @use "../utils/colors"; /*couleurs*/
+@use "../utils/_linear-gradient"; /*mixin gradient*/
 /***********restaurant*************/
 .menus {
   background-color: #f6f6f6;
   margin-bottom: 2rem;
 & .menudescription{
   position: relative;/*déplace le coeur*/
-    h3,
-    p {
-      margin: 0.5rem;/*place les marges pour les sous titres*/
-      
-    }
+    p, 
     h3{
-      padding-top: 0.5rem ;
+      padding: 0.3rem ;
     }
     i {
       font-size: 2rem;/*change la taille du coeur*/
@@ -20,6 +17,18 @@
       right: 1rem;/*déplace le coeur*/
       top: 50%;/*déplace et centre le coeur*/
       transform: translateY(-50%);/*déplace et centre le coeur*/
+    }
+    .fa-solid {/* modif de l'apparence du coeur, transition*/
+      color : transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      opacity: 0;/*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
+      transition: all 200ms ease-in-out;
+      @include linear-gradient.gradient;
+    }
+    &:hover .fa-solid{/* modif de l'apparence du coeur, transition*/
+      opacity: 1;/*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
+      transform: translateY(-50%) scale(1.2);/*déplace et centre le coeur*/
     }
 }
   h2 {
