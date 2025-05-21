@@ -23,7 +23,6 @@ main {
 }
 
 h2 {
-  margin: 2rem 0;
   margin: 0;
 }
 
@@ -102,11 +101,12 @@ header {
   counter-reset: numero; /*créé un compteur sur chaque onglet, 
 permet d'ajouter d'autre compteur à partir du html*/
   background-color: white;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 .fonctionnement ol {
   display: flex;
   gap: 2rem;
+  padding: 0;
 }
 @media (max-width: 768px) {
   .fonctionnement ol {
