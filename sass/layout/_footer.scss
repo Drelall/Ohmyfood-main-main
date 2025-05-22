@@ -10,15 +10,20 @@ footer{
         font-weight: 500;/*rend les lettres moins épaisses*/
         padding:1rem 0;;
     }
-    p {
+    a {
         padding:0.2rem;
 
     }
 .basdepage {
     @media (min-width: 1440px) {
         display: flex;
+        flex-direction: row-reverse;
         align-items: center;
         gap:1rem;
+        h2 {
+            margin-right: 4rem;
+            margin-left: 6rem;
+        }
     }
 }
 }

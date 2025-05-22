@@ -97,24 +97,26 @@ header {
 /*mixin de variables*/
 /*mixin de colors*/
 /********fonctionnement********/
-.contenainer {
+.container {
   background-color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-.contenainer .fonctionnement {
+.container .fonctionnement {
   counter-reset: numero; /*créé un compteur sur chaque onglet, 
 permet d'ajouter d'autre compteur à partir du html*/
 }
-.contenainer .fonctionnement ol {
+.container .fonctionnement ol {
   display: flex;
   gap: 2rem;
   padding: 0;
 }
 @media (max-width: 768px) {
-  .contenainer .fonctionnement ol {
+  .container .fonctionnement ol {
     flex-direction: column;
   }
 }
-.contenainer .fonctionnement li {
+.container .fonctionnement li {
   position: relative; /*à mettre dans le parent 
 si position absolute dans le before*/
   list-style-type: none;
@@ -125,7 +127,7 @@ si position absolute dans le before*/
   box-shadow: 2px 1px 7px -3px #000000;
   /*mixin de box shadow*/
 }
-.contenainer .fonctionnement li::before { /*ajoute un chiffre avant chaque onglet*/
+.container .fonctionnement li::before { /*ajoute un chiffre avant chaque onglet*/
   content: counter(numero);
   counter-increment: numero;
   color: white;
@@ -140,11 +142,11 @@ si position absolute dans le before*/
   transform: translateY(50%);
   left: -1rem;
 }
-.contenainer .fonctionnement li:hover {
+.container .fonctionnement li:hover {
   transform: scale(1.02); /*effet de zoom sur le boutton*/
   /*mixin de transform*/
 }
-.contenainer .fonctionnement li i.fas {
+.container .fonctionnement li i.fas {
   color: #9356dc;
   margin-right: 1rem;
 }
@@ -263,14 +265,19 @@ footer h2 {
   font-weight: 500; /*rend les lettres moins épaisses*/
   padding: 1rem 0;
 }
-footer p {
+footer a {
   padding: 0.2rem;
 }
 @media (min-width: 1440px) {
   footer .basdepage {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     gap: 1rem;
+  }
+  footer .basdepage h2 {
+    margin-right: 4rem;
+    margin-left: 6rem;
   }
 }
 
