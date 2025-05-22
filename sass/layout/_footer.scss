@@ -1,29 +1,28 @@
 @use "../utils/_colors"; /*couleurs*/
-footer{
+.basdepage {
     display: flex;
     flex-direction: column;
     background-color: colors.$black-footer;
     padding:1 2rem;
     color: white;/*couleur du texte*/
-    h2 {
+    & h2 {
         font-family: shrikhand;
         font-weight: 500;/*rend les lettres moins épaisses*/
         padding:1rem 0;;
     }
-    a {
+    & a {
         padding:0.2rem;
 
     }
-.basdepage {
     @media (min-width: 1440px) {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         gap:1rem;
-        h2 {
+        & h2 {
             margin-right: 4rem;
             margin-left: 6rem;
         }
     }
 }
-}
+

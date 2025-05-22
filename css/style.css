@@ -253,29 +253,29 @@ main .menus .carte .menuimagequatre {
 }
 
 /*couleurs*/
-footer {
+.basdepage {
   display: flex;
   flex-direction: column;
   background-color: #353535;
   padding: 1 2rem;
   color: white; /*couleur du texte*/
 }
-footer h2 {
+.basdepage h2 {
   font-family: shrikhand;
   font-weight: 500; /*rend les lettres moins épaisses*/
   padding: 1rem 0;
 }
-footer a {
+.basdepage a {
   padding: 0.2rem;
 }
 @media (min-width: 1440px) {
-  footer .basdepage {
+  .basdepage {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     gap: 1rem;
   }
-  footer .basdepage h2 {
+  .basdepage h2 {
     margin-right: 4rem;
     margin-left: 6rem;
   }
