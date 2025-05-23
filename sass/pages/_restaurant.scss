@@ -1,17 +1,25 @@
 @use "../utils/_variables"; /*mixin de box shadow*/
 @use "../utils/_colors"; /*couleurs*/
 @use "../utils/_mixins"; /*mixin gradient*/
-img{
+/*******image*******/
+.palette img {
+    display:block;
     width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: center bottom;
 }
-main .page {
+/***titre et coeur****/
+main {
+  &.page { 
     font-family: "shrikhand", "sans-serif";
-    padding: 0 1rem;
-    
-      position: relative;/*déplace le coeur*/   
+    padding: 2rem 1rem;
+    position: relative;/*déplace le coeur*/ 
+    margin-top: -1rem;
+    border-radius: 2rem 2rem 0 0 ;
     h2 {
       font-family: "shrikhand", "sans-serif";
-    }
+      }
     
     i {
       font-size: 2rem;/*change la taille du coeur*/
@@ -31,5 +39,13 @@ main .page {
     &:hover .fa-solid{/* modif de l'apparence du coeur, transition*/
       opacity: 1;/*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
       transform: translateY(-50%) scale(1.2);/*déplace et centre le coeur*/
+    }
+  }   
+}
+/**********carte**********/
+ .menupalette{
+    background:yellow;
+    & > *{
+      border: solid red;
     }
 }
