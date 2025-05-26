@@ -3,52 +3,54 @@
 @use "../utils/_mixins"; /*mixin gradient*/
 /*******image*******/
 .palette img {
-    display:block;
-    width: 100%;
-    height: 70vh;
-    object-fit: cover;
-    object-position: center bottom;
+  display: block;
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: center bottom;
 }
 /***titre et coeur****/
 main {
   background-color: white;
-  .page { 
+  .page {
     font-family: "shrikhand", "sans-serif";
     padding: 2rem 1rem;
-    position: relative;/*déplace le coeur*/ 
+    position: relative; /*déplace le coeur*/
     margin-top: -1rem;
-    border-radius: 2rem 2rem 0 0 ;
+    border-radius: 2rem 2rem 0 0;
     background-color: #f6f6f6;
-    
-  .pageun{
+
+    .pageun {
       font-family: "shrikhand", "sans-serif";
-      }
-    
-    i {
-      font-size: 2rem;/*change la taille du coeur*/
-      position: absolute;/*déplace le coeur*/
-      right: 1rem;/*déplace le coeur*/
-      top: 50%;/*déplace et centre le coeur*/
-      transform: translateY(-50%);/*déplace et centre le coeur*/
     }
-    .fa-solid {/* modif de l'apparence du coeur, transition*/
-      color : transparent;
+
+    i {
+      font-size: 2rem; /*change la taille du coeur*/
+      position: absolute; /*déplace le coeur*/
+      right: 1rem; /*déplace le coeur*/
+      top: 50%; /*déplace et centre le coeur*/
+      transform: translateY(-50%); /*déplace et centre le coeur*/
+    }
+    .fa-solid {
+      /* modif de l'apparence du coeur, transition*/
+      color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
-      opacity: 0;/*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
+      opacity: 0; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
       transition: all 200ms ease-in-out;
       @include mixins.gradient;
     }
-    &:hover .fa-solid{/* modif de l'apparence du coeur, transition*/
-      opacity: 1;/*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
-      transform: translateY(-50%) scale(1.2);/*déplace et centre le coeur*/
+    &:hover .fa-solid {
+      /* modif de l'apparence du coeur, transition*/
+      opacity: 1; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
+      transform: translateY(-50%) scale(1.2); /*déplace et centre le coeur*/
     }
-  }   
+  }
 }
 /**********carte**********/
- .menupalette{
-    background:yellow;
-    & > *{
-      border: solid red;
-    }
+.menupalette {
+  background: yellow;
+  & > * {
+    border: solid red;
+  }
 }

@@ -5,98 +5,103 @@
 main {
   background-color: #f6f6f6;
   .menus {
-padding-bottom: 2rem;
-& .menudescription{
-  position: relative;/*déplace le coeur*/
-    p, 
-    h3{
-      padding: 0.3rem ;
+    padding-bottom: 2rem;
+    & .menudescription {
+      position: relative; /*déplace le coeur*/
+      p,
+      h3 {
+        padding: 0.3rem;
+      }
+      i {
+        font-size: 2rem; /*change la taille du coeur*/
+        position: absolute; /*déplace le coeur*/
+        right: 1rem; /*déplace le coeur*/
+        top: 50%; /*déplace et centre le coeur*/
+        transform: translateY(-50%); /*déplace et centre le coeur*/
+      }
+      .fa-solid {
+        /* modif de l'apparence du coeur, transition*/
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
+        transition: all 200ms ease-in-out;
+        @include mixins.gradient;
+      }
+      &:hover .fa-solid {
+        /* modif de l'apparence du coeur, transition*/
+        opacity: 1; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
+        transform: translateY(-50%) scale(1.2); /*déplace et centre le coeur*/
+      }
     }
-    i {
-      font-size: 2rem;/*change la taille du coeur*/
-      position: absolute;/*déplace le coeur*/
-      right: 1rem;/*déplace le coeur*/
-      top: 50%;/*déplace et centre le coeur*/
-      transform: translateY(-50%);/*déplace et centre le coeur*/
+    h2 {
+      margin-bottom: 2rem;
+      margin-top: 2rem;
     }
-    .fa-solid {/* modif de l'apparence du coeur, transition*/
-      color : transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      opacity: 0;/*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
-      transition: all 200ms ease-in-out;
-      @include mixins.gradient;
-    }
-    &:hover .fa-solid{/* modif de l'apparence du coeur, transition*/
-      opacity: 1;/*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
-      transform: translateY(-50%) scale(1.2);/*déplace et centre le coeur*/
-    }
-}
-  h2 {
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-  }
-  .menucarte {
-    display: grid;
-    grid-template-columns:repeat( 2, 1fr);
-    gap: 2rem;
-    
-    @media (max-width: variables.$menu-carte) {
-      grid-template-columns:repeat( 1, 1fr);
-    }
-  }
-  .cartenouveau {/* cette partie permet d'intégrer nouveau*/
-  position :relative;
-  background-color: #ffffff;/*fond blanc de la carte*/
-  border-radius: 1rem;
-  &::before{/* cette partie permet d'intégrer nouveau*/
-      content : "Nouveau";
-      position : absolute;
-      height: 2rem;
-      width: 5rem;
-      background-color: colors.$tertiaire;
-      color: darken(colors.$tertiaire, $amount: 50%); /*permet de garder la même couleur pour le texte en l'assombrissant*/
-      display: grid; /* ajuste le texte verticalement*/
-      place-items: center;/*centre le texte*/
-      right: 1rem;/*place le texte nouveau dans la bonne partie de la carte*/
-      top:1rem;/*place le texte nouveau dans la bonne partie de la carte*/
-      border-radius: 0.2rem;
-      
-    }
-  & .menuimageun{/*les cartes*/
-  background-image: url("../../assets/images/restaurants/menuun.jpg");
-  height: 15rem;
-  background-size: cover;
-  background-position: center;
-  border-radius: 1rem 1rem 0 0;
-    }
-  & .menuimagedeux{
-  background-image: url("../../assets/images/restaurants/menudeux.jpg");
-  height: 15rem;
-  background-size: cover;
-  background-position: center;
-  border-radius: 1rem 1rem 0 0;
-  }
-}
-  .carte{
-  background-color: #ffffff;/*fond blanc de la carte*/
-  border-radius: 1rem;
-  & .menuimagetrois{
-  background-image: url("../../assets/images/restaurants/menutrois.jpg");
-  height: 15rem;
-  background-size: cover;
-  background-position: center;
-  border-radius: 1rem 1rem 0 0;
-  }
-  & .menuimagequatre{
-  background-image: url("../../assets/images/restaurants/menuquatre.jpg");
-  height: 15rem;
-  background-size: cover;
-  background-position: center;
-  border-radius: 1rem 1rem 0 0;
-  }
-}
-}
-}
+    .menucarte {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
 
-
+      @media (max-width: variables.$menu-carte) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    .cartenouveau {
+      /* cette partie permet d'intégrer nouveau*/
+      position: relative;
+      background-color: #ffffff; /*fond blanc de la carte*/
+      border-radius: 1rem;
+      &::before {
+        /* cette partie permet d'intégrer nouveau*/
+        content: "Nouveau";
+        position: absolute;
+        height: 2rem;
+        width: 5rem;
+        background-color: colors.$tertiaire;
+        color: darken(
+          colors.$tertiaire,
+          $amount: 50%
+        ); /*permet de garder la même couleur pour le texte en l'assombrissant*/
+        display: grid; /* ajuste le texte verticalement*/
+        place-items: center; /*centre le texte*/
+        right: 1rem; /*place le texte nouveau dans la bonne partie de la carte*/
+        top: 1rem; /*place le texte nouveau dans la bonne partie de la carte*/
+        border-radius: 0.2rem;
+      }
+      & .menuimageun {
+        /*les cartes*/
+        background-image: url("../../assets/images/restaurants/menuun.jpg");
+        height: 15rem;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem 1rem 0 0;
+      }
+      & .menuimagedeux {
+        background-image: url("../../assets/images/restaurants/menudeux.jpg");
+        height: 15rem;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem 1rem 0 0;
+      }
+    }
+    .carte {
+      background-color: #ffffff; /*fond blanc de la carte*/
+      border-radius: 1rem;
+      & .menuimagetrois {
+        background-image: url("../../assets/images/restaurants/menutrois.jpg");
+        height: 15rem;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem 1rem 0 0;
+      }
+      & .menuimagequatre {
+        background-image: url("../../assets/images/restaurants/menuquatre.jpg");
+        height: 15rem;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem 1rem 0 0;
+      }
+    }
+  }
+}

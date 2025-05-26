@@ -1,43 +1,43 @@
 @use "../utils/_mixins"; /*mixin de box shadow*/
-@use "../utils/_variables";/*mixin de variables*/
+@use "../utils/_variables"; /*mixin de variables*/
 @use "../utils/_colors"; /*mixin de colors*/
-
 
 /********fonctionnement********/
 .container {
-   background-color: white;
-   padding-top: 2rem;
-   padding-bottom: 2rem;
-.fonctionnement{
+  background-color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  .fonctionnement {
     counter-reset: numero; /*créé un compteur sur chaque onglet, 
     permet d'ajouter d'autre compteur à partir du html*/
-   
+
     & ol {
-        display: flex;
-        gap: 2rem;
-        padding: 0;
-        @media (max-width: 768px) {
-            flex-direction: column;
-        }
+      display: flex;
+      gap: 2rem;
+      padding: 0;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
     }
     & li {
-        position: relative; /*à mettre dans le parent 
+      position: relative; /*à mettre dans le parent 
       si position absolute dans le before*/
-        &::before { /*ajoute un chiffre avant chaque onglet*/
-          content: counter(numero);
-          counter-increment: numero;
-          color: white;
-          background-color: colors.$purple;
-          width: 2 * variables.$variable-fonct; /*valeur réutilisable*/
-          height: 2 * variables.$variable-fonct;
-          display: grid; /* Active le modèle de mise en page par grille */
-          place-items: center; /*recentre les numéros*/
-          border-radius: 50%;
-          position: absolute;
-          bottom: 50%;
-          transform: translateY(50%);
-          left: -1 * variables.$variable-fonct;
-        }
+      &::before {
+        /*ajoute un chiffre avant chaque onglet*/
+        content: counter(numero);
+        counter-increment: numero;
+        color: white;
+        background-color: colors.$purple;
+        width: 2 * variables.$variable-fonct; /*valeur réutilisable*/
+        height: 2 * variables.$variable-fonct;
+        display: grid; /* Active le modèle de mise en page par grille */
+        place-items: center; /*recentre les numéros*/
+        border-radius: 50%;
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+        left: -1 * variables.$variable-fonct;
+      }
       list-style-type: none;
       background-color: #f6f6f6;
       padding: 1.5rem 2rem;
@@ -46,18 +46,11 @@
       @include mixins.base-shadow; /*mixin de box shadow*/
       &:hover {
         @include mixins.transform-zoom; /*mixin de transform*/
+      }
+      i.fas {
+        color: colors.$purple;
+        margin-right: 1rem;
+      }
     }
-    i.fas {
-      color: colors.$purple;
-      margin-right: 1rem;
-    }
-    }
+  }
 }
-}
-
-
-
-
-
-
-
