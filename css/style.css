@@ -2,22 +2,15 @@
 *,
 ::before,
 ::after {
-  box-sizing: border-box; /*?Évite que les bordures et les paddings ne débordent en augmentant la taille totale d'un élément.**/
+  box-sizing: border-box; /*Évite que les bordures et
+les paddings ne "débordent" 
+en augmentant la taille totale d'un élément. */
 }
 
-/*?Titre du site**/
+/*******Titre du site*********/
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-}
-
-main {
-  padding: 0 7rem;
-}
-@media (max-width: 768px) {
-  main {
-    padding: 0 1rem;
-  }
 }
 
 h2 {
@@ -30,8 +23,8 @@ p {
 }
 
 a {
-  text-decoration: none; /**?permet aulien de ne pas être en surbrillance*/
-  color: inherit; /**?permet aulien de ne pas être en surbrillance*/
+  text-decoration: none; /*permet aulien de ne pas être en surbrillance*/
+  color: inherit; /*permet aulien de ne pas être en surbrillance*/
 }
 
 header {
@@ -43,7 +36,7 @@ header {
   position: relative;
 }
 
-/**?barre de localisation*********/
+/*******barre de localisation*********/
 .ville {
   display: flex;
   align-items: center;
@@ -57,15 +50,14 @@ header {
   font-size: 1.5rem;
 }
 
-/*******?sous titre et exploration********/
+/********sous titre et exploration********/
 .explorer {
   background-color: #f6f6f6;
   text-align: center;
-  padding-bottom: 2rem;
+  padding: 2rem;
 }
 .explorer h2 {
   font-size: 3rem;
-  padding-top: 2rem;
   padding-bottom: 2rem;
   font-size: 2rem;
 }
@@ -81,28 +73,29 @@ header {
   border-radius: 2rem;
   box-shadow: 2px 1px 7px -3px #000000;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
-  transition: transform 200ms; /*?vitesse du zoom**/
+  transition: transform 200ms; /*vitesse du zoom*/
   margin-top: 1.5rem;
 }
-.explorer button:hover { /*?effet de zoom sur le boutton**/
+.explorer button:hover {
+  /*effet de zoom sur le boutton*/
   transform: scale(1.02);
   opacity: 0.9;
 }
 
 /*mixin de box shadow*/
-/*****?variables*********/
+/******variables*********/
 /*valeurs réutilisables,*/
 /*media*/
 /*mixin de variables*/
 /*mixin de colors*/
-/*?fonctionnement**/
+/********fonctionnement********/
 .container {
   background-color: white;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem;
 }
 .container .fonctionnement {
-  counter-reset: numero; /*?créé un compteur sur chaque onglet,permet d'ajouter d'autre compteur à partir du html**/
+  counter-reset: numero; /*créé un compteur sur chaque onglet, 
+permet d'ajouter d'autre compteur à partir du html*/
 }
 .container .fonctionnement ol {
   display: flex;
@@ -115,7 +108,8 @@ header {
   }
 }
 .container .fonctionnement li {
-  position: relative; /*?à mettre dans le parent si position absolute dans le before*/
+  position: relative; /*à mettre dans le parent 
+si position absolute dans le before*/
   list-style-type: none;
   background-color: #f6f6f6;
   padding: 1.5rem 2rem;
@@ -124,15 +118,16 @@ header {
   box-shadow: 2px 1px 7px -3px #000000;
   /*mixin de box shadow*/
 }
-.container .fonctionnement li::before { /*?ajoute un chiffre avant chaque onglet*/
+.container .fonctionnement li::before {
+  /*ajoute un chiffre avant chaque onglet*/
   content: counter(numero);
   counter-increment: numero;
   color: white;
   background-color: #9356dc;
-  width: 2rem; /*?valeur réutilisable*/
+  width: 2rem; /*valeur réutilisable*/
   height: 2rem;
-  display: grid; /**Active le modèle de mise en page par grille */
-  place-items: center; /**recentre les numéros*/
+  display: grid; /* Active le modèle de mise en page par grille */
+  place-items: center; /*recentre les numéros*/
   border-radius: 50%;
   position: absolute;
   bottom: 50%;
@@ -140,8 +135,8 @@ header {
   left: -1rem;
 }
 .container .fonctionnement li:hover {
-  transform: scale(1.02); /*?effet de zoom sur le boutton*/
-  /*?mixin de transform*/
+  transform: scale(1.02); /*effet de zoom sur le boutton*/
+  /*mixin de transform*/
 }
 .container .fonctionnement li i.fas {
   color: #9356dc;
@@ -151,38 +146,41 @@ header {
 /*mixin de box shadow*/
 /*couleurs*/
 /*mixin gradient*/
-/**********?restaurant*************/
+/***********restaurant*************/
 main {
   background-color: #f6f6f6;
 }
 main .menus {
-  padding-bottom: 2rem;
+  padding: 2rem 2rem;
+  background-color: #f4f4f4;
 }
 main .menus .menudescription {
-  position: relative; /*?déplace le coeur*/
+  position: relative; /*déplace le coeur*/
 }
 main .menus .menudescription p,
 main .menus .menudescription h3 {
   padding: 0.3rem;
 }
 main .menus .menudescription i {
-  font-size: 2rem; /*?change la taille du coeur*/
-  position: absolute; /*?déplace le coeur*/
-  right: 1rem; /*?déplace le coeur*/
-  top: 50%; /*?déplace et centre le coeur*/
-  transform: translateY(-50%); /*?déplace et centre le coeur*/
+  font-size: 2rem; /*change la taille du coeur*/
+  position: absolute; /*déplace le coeur*/
+  right: 1rem; /*déplace le coeur*/
+  top: 50%; /*déplace et centre le coeur*/
+  transform: translateY(-50%); /*déplace et centre le coeur*/
 }
-main .menus .menudescription .fa-solid { /* modif de l'apparence du coeur, transition*/
+main .menus .menudescription .fa-solid {
+  /* modif de l'apparence du coeur, transition*/
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  opacity: 0; /*?permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
+  opacity: 0; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
-main .menus .menudescription:hover .fa-solid { /*?modif de l'apparence du coeur, transition*/
-  opacity: 1; /*?permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
-  transform: translateY(-50%) scale(1.2); /*?déplace et centre le coeur*/
+main .menus .menudescription:hover .fa-solid {
+  /* modif de l'apparence du coeur, transition*/
+  opacity: 1; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
+  transform: translateY(-50%) scale(1.2); /*déplace et centre le coeur*/
 }
 main .menus h2 {
   margin-bottom: 2rem;
@@ -198,25 +196,28 @@ main .menus .menucarte {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-main .menus .cartenouveau { /*?cette partie permet d'intégrer nouveau*/
+main .menus .cartenouveau {
+  /* cette partie permet d'intégrer nouveau*/
   position: relative;
-  background-color: #ffffff; /*?fond blanc de la carte*/
+  background-color: #ffffff; /*fond blanc de la carte*/
   border-radius: 1rem;
 }
-main .menus .cartenouveau::before { /*?cette partie permet d'intégrer nouveau*/
+main .menus .cartenouveau::before {
+  /* cette partie permet d'intégrer nouveau*/
   content: "Nouveau";
   position: absolute;
   height: 2rem;
   width: 5rem;
   background-color: #99E2D0;
   color: rgb(27.4503816794, 96.5496183206, 79.5114503817); /*permet de garder la même couleur pour le texte en l'assombrissant*/
-  display: grid; /*?ajuste le texte verticalement*/
-  place-items: center; /*?centre le texte*/
-  right: 1rem; /*?place le texte nouveau dans la bonne partie de la carte*/
-  top: 1rem; /*?place le texte nouveau dans la bonne partie de la carte*/
+  display: grid; /* ajuste le texte verticalement*/
+  place-items: center; /*centre le texte*/
+  right: 1rem; /*place le texte nouveau dans la bonne partie de la carte*/
+  top: 1rem; /*place le texte nouveau dans la bonne partie de la carte*/
   border-radius: 0.2rem;
 }
-main .menus .cartenouveau .menuimageun { /*les cartes*/
+main .menus .cartenouveau .menuimageun {
+  /*les cartes*/
   background-image: url("../../assets/images/restaurants/menuun.jpg");
   height: 15rem;
   background-size: cover;
@@ -231,7 +232,7 @@ main .menus .cartenouveau .menuimagedeux {
   border-radius: 1rem 1rem 0 0;
 }
 main .menus .carte {
-  background-color: #ffffff; /*?fond blanc de la carte*/
+  background-color: #ffffff; /*fond blanc de la carte*/
   border-radius: 1rem;
 }
 main .menus .carte .menuimagetrois {
@@ -249,17 +250,17 @@ main .menus .carte .menuimagequatre {
   border-radius: 1rem 1rem 0 0;
 }
 
-/*?couleurs*/
+/*couleurs*/
 .basdepage {
   display: flex;
   flex-direction: column;
   background-color: #353535;
   padding: 1 2rem;
-  color: white; /*?couleur du texte*/
+  color: white; /*couleur du texte*/
 }
 .basdepage h2 {
   font-family: shrikhand;
-  font-weight: 500; /*?rend les lettres moins épaisses*/
+  font-weight: 500; /*rend les lettres moins épaisses*/
   padding: 1rem 0;
 }
 .basdepage a {
@@ -277,7 +278,11 @@ main .menus .carte .menuimagequatre {
     margin-left: 6rem;
   }
 }
-/******?image*******/
+
+/*mixin de box shadow*/
+/*couleurs*/
+/*mixin gradient*/
+/*******image*******/
 .palette img {
   display: block;
   width: 100%;
@@ -286,14 +291,14 @@ main .menus .carte .menuimagequatre {
   object-position: center bottom;
 }
 
-/**?titre et coeur****/
+/***titre et coeur****/
 main {
   background-color: white;
 }
 main .page {
   font-family: "shrikhand", "sans-serif";
   padding: 2rem 1rem;
-  position: relative; /*?déplace le coeur*/
+  position: relative; /*déplace le coeur*/
   margin-top: -1rem;
   border-radius: 2rem 2rem 0 0;
   background-color: #f6f6f6;
@@ -302,26 +307,28 @@ main .page .pageun {
   font-family: "shrikhand", "sans-serif";
 }
 main .page i {
-  font-size: 2rem; /*?change la taille du coeur*/
-  position: absolute; /*?déplace le coeur*/
-  right: 1rem; /*?déplace le coeur*/
-  top: 50%; /*?déplace et centre le coeur*/
-  transform: translateY(-50%); /**déplace et centre le coeur*/
+  font-size: 2rem; /*change la taille du coeur*/
+  position: absolute; /*déplace le coeur*/
+  right: 1rem; /*déplace le coeur*/
+  top: 50%; /*déplace et centre le coeur*/
+  transform: translateY(-50%); /*déplace et centre le coeur*/
 }
-main .page .fa-solid { /*?modif de l'apparence du coeur, transition*/
+main .page .fa-solid {
+  /* modif de l'apparence du coeur, transition*/
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  opacity: 0; /*?permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
+  opacity: 0; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
-main .page:hover .fa-solid { /*?modif de l'apparence du coeur, transition*/
-  opacity: 1; /*?permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
+main .page:hover .fa-solid {
+  /* modif de l'apparence du coeur, transition*/
+  opacity: 1; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
   transform: translateY(-50%) scale(1.2); /*déplace et centre le coeur*/
 }
 
-/**********?carte**********/
+/**********carte**********/
 .menupalette {
   background: yellow;
 }
@@ -331,4 +338,4 @@ main .page:hover .fa-solid { /*?modif de l'apparence du coeur, transition*/
 
 
 
-/**# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */

@@ -5,8 +5,7 @@
 /********fonctionnement********/
 .container {
   background-color: white;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding : 2rem;
   .fonctionnement {
     counter-reset: numero; /*créé un compteur sur chaque onglet, 
     permet d'ajouter d'autre compteur à partir du html*/

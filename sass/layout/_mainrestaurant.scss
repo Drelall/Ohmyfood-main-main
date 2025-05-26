@@ -5,7 +5,8 @@
 main {
   background-color: #f6f6f6;
   .menus {
-    padding-bottom: 2rem;
+    padding: 2rem 2rem;
+    background-color: #f4f4f4;
     & .menudescription {
       position: relative; /*déplace le coeur*/
       p,
