@@ -7,6 +7,11 @@ main {
   .menus {
     padding: 2rem 2rem;
     background-color: #f4f4f4;
+    .menumarge{
+       max-width: 1280px;
+       margin: auto;
+    }
+    
     & .menudescription {
       position: relative; /*déplace le coeur*/
       p,

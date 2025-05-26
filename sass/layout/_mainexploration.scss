@@ -1,6 +1,10 @@
 @use "../utils/_mixins";
 /********sous titre et exploration********/
 .explorer {
+  & .explo {
+    max-width: 1280px;
+    margin: auto;
+  }
   background-color: #f6f6f6;
   text-align: center;
   padding: 2rem;

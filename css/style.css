@@ -56,6 +56,10 @@ header {
   text-align: center;
   padding: 2rem;
 }
+.explorer .explo {
+  max-width: 1280px;
+  margin: auto;
+}
 .explorer h2 {
   font-size: 3rem;
   padding-bottom: 2rem;
@@ -94,6 +98,8 @@ header {
   padding: 2rem;
 }
 .container .fonctionnement {
+  max-width: 1280px;
+  margin: auto;
   counter-reset: numero; /*créé un compteur sur chaque onglet, 
 permet d'ajouter d'autre compteur à partir du html*/
 }
@@ -153,6 +159,10 @@ main {
 main .menus {
   padding: 2rem 2rem;
   background-color: #f4f4f4;
+}
+main .menus .menumarge {
+  max-width: 1280px;
+  margin: auto;
 }
 main .menus .menudescription {
   position: relative; /*déplace le coeur*/
