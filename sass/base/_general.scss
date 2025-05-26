@@ -3,12 +3,12 @@
 *,
 ::before,
 ::after {
-    box-sizing: border-box; /* Évite que les bordures et
+  box-sizing: border-box; /*Évite que les bordures et
   les paddings ne "débordent" 
   en augmentant la taille totale d'un élément. */
 }
-  /*******Titre du site*********/
- 
+/*******Titre du site*********/
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -16,18 +16,17 @@ body {
 main {
   padding: 0 7rem;
   @media (max-width: 768px) {
-            padding: 0 1rem;
-        }
-
+    padding: 0 1rem;
+  }
 }
 h2 {
   margin: 0;
 }
-h3, 
+h3,
 p {
   margin: 0;
 }
 a {
-  text-decoration: none;/*permet aulien de ne pas être en surbrillance*/
-  color: inherit;/*permet aulien de ne pas être en surbrillance*/
+  text-decoration: none; /*permet aulien de ne pas être en surbrillance*/
+  color: inherit; /*permet aulien de ne pas être en surbrillance*/
 }
