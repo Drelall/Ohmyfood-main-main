@@ -1,6 +1,7 @@
 @use "../utils/_mixins"; 
 /********sous titre et exploration********/
 .explorer {
+  background-color: #f6f6f6;
   text-align: center;
   padding-bottom: 2rem;
   & h2 {

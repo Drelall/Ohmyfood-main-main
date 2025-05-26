@@ -11,13 +11,16 @@
 }
 /***titre et coeur****/
 main {
-  &.page { 
+  background-color: white;
+  .page { 
     font-family: "shrikhand", "sans-serif";
     padding: 2rem 1rem;
     position: relative;/*déplace le coeur*/ 
     margin-top: -1rem;
     border-radius: 2rem 2rem 0 0 ;
-    h2 {
+    background-color: #f6f6f6;
+    
+  .pageun{
       font-family: "shrikhand", "sans-serif";
       }
     
