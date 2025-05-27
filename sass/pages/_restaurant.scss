@@ -10,8 +10,20 @@
   object-position: center bottom;
 }
 /***titre et coeur****/
-main {
-  background-color: white;
+.mainrestoun {
+  @media(min-width: 1440px) {
+    padding: 0rem 10rem;
+  }
+/**********carte**********/
+.menupalette {
+display: flex;
+flex-direction: column;
+gap: 2rem;
+padding: 2rem;
+}
+.entrees {
+  background-color: colors.$white;
+}
   .page {
     font-family: "shrikhand", "sans-serif";
     padding: 2rem 1rem;
@@ -45,12 +57,5 @@ main {
       opacity: 1; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
       transform: translateY(-50%) scale(1.2); /*déplace et centre le coeur*/
     }
-  }
-}
-/**********carte**********/
-.menupalette {
-  background: yellow;
-  & > * {
-    border: solid red;
   }
 }
