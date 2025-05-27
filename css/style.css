@@ -301,10 +301,7 @@ main .menus .carte .menuimagequatre {
   object-position: center bottom;
 }
 
-/***titre et coeur****/
-.mainrestoun {
-  /**********carte**********/
-}
+/***titre, coeur, et carte****/
 @media (min-width: 1440px) {
   .mainrestoun {
     padding: 0rem 10rem;

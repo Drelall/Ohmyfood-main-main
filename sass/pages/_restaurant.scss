@@ -9,12 +9,11 @@
   object-fit: cover;
   object-position: center bottom;
 }
-/***titre et coeur****/
+/***titre, coeur, et carte****/
 .mainrestoun {
   @media(min-width: 1440px) {
     padding: 0rem 10rem;
   }
-/**********carte**********/
 .menupalette {
 display: flex;
 flex-direction: column;
