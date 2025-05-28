@@ -11,54 +11,77 @@
 }
 /***titre, coeur, et carte****/
 .mainrestoun {
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
     padding: 0rem 10rem;
     background-color: white;
   }
-.menupalette {
-display: flex;
-flex-direction: column;
-gap: 2rem;
-padding: 2rem;
-background-color: #f6f6f6;
-.sansgras {
-  font-weight: normal;
-  color: gray;
-}
-}
-.entrees {
-
-  background-color: colors.$white;
-  padding: 1rem;
-  border-radius: 1rem;
-  .plats {
+  .menupalette {
     display: flex;
-  .prix{
-      margin-left: auto ;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f6f6f6;
+    .sansgras {
+      font-weight: normal;
+      color: gray;
+    }
+  }
+  .entrees {
+    background-color: colors.$white;
+    border-radius: 1rem;
+    
+    .entre {
+      display: flex;
+      & > * {
+        align-items: flex-start;
+      }
+    }
+    
+    .prix {
+      font-weight: bold;
+      margin-left: auto;
+      display:flex;
+      align-items: center;
+      margin-top: 1.2rem; /*déplace le 25euros pour l'aligner*/
+
+    }
+    
+    .entr {
+      padding: 1rem;
+
+    }
+
+    & :hover .verif{
+      margin-right: 0;
+      opacity: 1;
+    }
+    
+    .verif {
+      background-color: colors.$tertiaire;
+      margin-right: -2.7rem;
+      width: 3rem;
+      overflow: hidden;
+      opacity :0;
+      border-radius: 0 1rem 1rem 0;
+      transition: all 0.6s;
+    }
+
+    .gras {
       font-weight: bold;
     }
-  .valide {
-    background-color: colors.$tertiaire;
-    
   }
-  }
-  .gras{
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-}
   .page {
     font-family: "shrikhand", "sans-serif";
     padding: 2rem 2rem;
     position: relative; /*déplace le coeur*/
     margin-top: -2rem;
-    border-radius: 2rem 2rem 0 0;
+    border-radius: 1rem 1rem 0 0;
     background-color: #f6f6f6;
 
     .pageun {
       font-family: "shrikhand", "sans-serif";
-      @media(min-width: 1440px) {
-      text-align: center;
+      @media (min-width: 1440px) {
+        text-align: center;
       }
     }
 
@@ -68,8 +91,8 @@ background-color: #f6f6f6;
       right: 1rem; /*déplace le coeur*/
       top: 50%; /*déplace et centre le coeur*/
       transform: translateY(-50%); /*déplace et centre le coeur*/
-     @media(min-width: 1440px) {
-      right: 26rem;
+      @media (min-width: 1440px) {
+        right: 25rem;
       }
     }
     .fa-solid {

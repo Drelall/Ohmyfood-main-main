@@ -321,29 +321,46 @@ main .menus .carte .menuimagequatre {
 }
 .mainrestoun .entrees {
   background-color: #ffffff;
-  padding: 1rem;
   border-radius: 1rem;
 }
-.mainrestoun .entrees .plats {
+.mainrestoun .entrees .entre {
   display: flex;
 }
-.mainrestoun .entrees .plats .prix {
-  margin-left: auto;
-  font-weight: bold;
+.mainrestoun .entrees .entre > * {
+  align-items: flex-start;
 }
-.mainrestoun .entrees .plats .valide {
+.mainrestoun .entrees .prix {
+  font-weight: bold;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 1.2rem; /*déplace le 25euros pour l'aligner*/
+}
+.mainrestoun .entrees .entr {
+  padding: 1rem;
+}
+.mainrestoun .entrees :hover .verif {
+  margin-right: 0;
+  opacity: 1;
+}
+.mainrestoun .entrees .verif {
   background-color: #99E2D0;
+  margin-right: -2.7rem;
+  width: 3rem;
+  overflow: hidden;
+  opacity: 0;
+  border-radius: 0 1rem 1rem 0;
+  transition: all 0.6s;
 }
 .mainrestoun .entrees .gras {
   font-weight: bold;
-  margin-bottom: 1rem;
 }
 .mainrestoun .page {
   font-family: "shrikhand", "sans-serif";
   padding: 2rem 2rem;
   position: relative; /*déplace le coeur*/
   margin-top: -2rem;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 1rem 1rem 0 0;
   background-color: #f6f6f6;
 }
 .mainrestoun .page .pageun {
@@ -363,7 +380,7 @@ main .menus .carte .menuimagequatre {
 }
 @media (min-width: 1440px) {
   .mainrestoun .page i {
-    right: 26rem;
+    right: 25rem;
   }
 }
 .mainrestoun .page .fa-solid {
