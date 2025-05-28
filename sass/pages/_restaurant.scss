@@ -13,26 +13,53 @@
 .mainrestoun {
   @media(min-width: 1440px) {
     padding: 0rem 10rem;
+    background-color: white;
   }
 .menupalette {
 display: flex;
 flex-direction: column;
 gap: 2rem;
 padding: 2rem;
+background-color: #f6f6f6;
+.sansgras {
+  font-weight: normal;
+  color: gray;
+}
 }
 .entrees {
+
   background-color: colors.$white;
+  padding: 1rem;
+  border-radius: 1rem;
+  .plats {
+    display: flex;
+  .prix{
+      margin-left: auto ;
+      font-weight: bold;
+    }
+  .valide {
+    background-color: colors.$tertiaire;
+    
+  }
+  }
+  .gras{
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
 }
   .page {
     font-family: "shrikhand", "sans-serif";
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
     position: relative; /*déplace le coeur*/
-    margin-top: -1rem;
+    margin-top: -2rem;
     border-radius: 2rem 2rem 0 0;
     background-color: #f6f6f6;
 
     .pageun {
       font-family: "shrikhand", "sans-serif";
+      @media(min-width: 1440px) {
+      text-align: center;
+      }
     }
 
     i {
@@ -41,6 +68,9 @@ padding: 2rem;
       right: 1rem; /*déplace le coeur*/
       top: 50%; /*déplace et centre le coeur*/
       transform: translateY(-50%); /*déplace et centre le coeur*/
+     @media(min-width: 1440px) {
+      right: 26rem;
+      }
     }
     .fa-solid {
       /* modif de l'apparence du coeur, transition*/
