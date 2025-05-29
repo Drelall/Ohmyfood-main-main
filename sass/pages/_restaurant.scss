@@ -1,6 +1,7 @@
 @use "../utils/_variables"; /*mixin de box shadow*/
 @use "../utils/_colors"; /*couleurs*/
 @use "../utils/_mixins"; /*mixin gradient*/
+@use "../utils/_animations"; /*mixin gradient*/
 /*******titre du site*******/
 .fleche ::before {/* ajoute la flèche de retour*/
   @include mixins.fleche-retour;
@@ -50,6 +51,7 @@
       }
     }
     .entrees {
+      @include animations.use-quarterspin;/*animation des onglets*/
       background-color: colors.$white;
       border-radius: 1rem;
 

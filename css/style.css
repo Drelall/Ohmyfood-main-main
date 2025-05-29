@@ -307,6 +307,17 @@ main .menus .carte .menuimagequatre {
 /*mixin de box shadow*/
 /*couleurs*/
 /*mixin gradient*/
+@keyframes quarterspin {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*mixin gradient*/
 /*******titre du site*******/
 .fleche ::before { /* ajoute la flèche de retour*/
   display: inline-block;
@@ -368,6 +379,8 @@ main .menus .carte .menuimagequatre {
   display: inline-block;
 }
 .mainrestoun .menupalette .entrees {
+  animation: quarterspin 2s;
+  /*animation des onglets*/
   background-color: #ffffff;
   border-radius: 1rem;
 }
