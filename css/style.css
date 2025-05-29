@@ -69,19 +69,34 @@ header {
   font-size: 1rem;
 }
 .explorer button {
+  /*mixin du bouton*/
   color: white;
   font-weight: 300;
   font-size: 1.5rem;
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
-  box-shadow: 2px 1px 7px -3px #000000;
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
   transition: transform 200ms; /*vitesse du zoom*/
   margin-top: 1.5rem;
+  cursor: pointer;
+  box-shadow: 2px 1px 7px -3px lightgrey;
+  background-image: linear-gradient(to top, #9356dc, #ff79da); /*couleur du bouton*/
+  /*mixin du bouton*/
+  color: white;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  transition: transform 200ms; /*vitesse du zoom*/
+  margin-top: 1.5rem;
+  cursor: pointer;
 }
 .explorer button:hover {
-  /*effet de zoom sur le boutton*/
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+.explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
 }
@@ -121,7 +136,7 @@ si position absolute dans le before*/
   padding: 1.5rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
-  box-shadow: 2px 1px 7px -3px #000000;
+  box-shadow: 2px 1px 7px -3px lightgrey;
   /*mixin de box shadow*/
 }
 .container .fonctionnement li::before {
@@ -185,7 +200,7 @@ main .menus .menudescription .fa-solid {
   -webkit-background-clip: text;
   opacity: 0; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
   transition: all 200ms ease-in-out;
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  background-image: linear-gradient(to top, #9356dc, #ff79da); /*couleur du bouton*/
 }
 main .menus .menudescription:hover .fa-solid {
   /* modif de l'apparence du coeur, transition*/
@@ -292,16 +307,36 @@ main .menus .carte .menuimagequatre {
 /*mixin de box shadow*/
 /*couleurs*/
 /*mixin gradient*/
+/*******titre du site*******/
+.fleche ::before { /* ajoute la flèche de retour*/
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "FontAwesome 5 free";
+  font-weight: 900;
+  content: "\f060"; /*identification de l'item sur fa*/
+  font-family: "Font Awesome 6 Free"; /*pour bien voir apparaitre la fleche de retour*/
+  font-weight: 900; /*pour bien voir apparaitre la fleche de retour*/
+  position: absolute;
+  left: 1rem;
+}
+
 /*******image*******/
 .palette img {
   display: block;
   width: 100%;
-  height: 70vh;
+  height: 40vh;
   object-fit: cover;
-  object-position: center bottom;
+}
+@media (max-width: 1024px) {
+  .palette img {
+    height: 30vh;
+  }
 }
 
-/***titre, coeur, et carte****/
+/***restaurant****/
 @media (min-width: 1440px) {
   .mainrestoun {
     padding: 0rem 10rem;
@@ -318,32 +353,51 @@ main .menus .carte .menuimagequatre {
 .mainrestoun .menupalette .sansgras {
   font-weight: normal;
   color: gray;
+  text-transform: uppercase;
+  position: relative;
 }
-.mainrestoun .entrees {
+.mainrestoun .menupalette .sansgras::after {
+  /***ligne verte après le texte***/
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 0rem;
+  height: 0.25rem;
+  width: 2.65rem;
+  background-color: #99E2D0;
+  display: inline-block;
+}
+.mainrestoun .menupalette .entrees {
   background-color: #ffffff;
   border-radius: 1rem;
 }
-.mainrestoun .entrees .entre {
+.mainrestoun .menupalette .entrees .entre {
   display: flex;
+  box-shadow: 2px 1px 7px -3px lightgrey;
+  /*border-shadow*/
+  border-radius: 1rem;
 }
-.mainrestoun .entrees .entre > * {
+.mainrestoun .menupalette .entrees .entre > * {
   align-items: flex-start;
 }
-.mainrestoun .entrees .prix {
+.mainrestoun .menupalette .entrees .prix {
   font-weight: bold;
   margin-left: auto;
   display: flex;
   align-items: center;
   margin-top: 1.2rem; /*déplace le 25euros pour l'aligner*/
+  margin-right: 1rem;
 }
-.mainrestoun .entrees .entr {
+.mainrestoun .menupalette .entrees .entr {
   padding: 1rem;
+  cursor: pointer; /*change le curseur en main*/
 }
-.mainrestoun .entrees :hover .verif {
+.mainrestoun .menupalette .entrees :hover .verif {
   margin-right: 0;
   opacity: 1;
 }
-.mainrestoun .entrees .verif {
+.mainrestoun .menupalette .entrees .verif {
+  /*animation verte de validation*/
   background-color: #99E2D0;
   margin-right: -2.7rem;
   width: 3rem;
@@ -351,8 +405,16 @@ main .menus .carte .menuimagequatre {
   opacity: 0;
   border-radius: 0 1rem 1rem 0;
   transition: all 0.6s;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  color: white;
 }
-.mainrestoun .entrees .gras {
+.mainrestoun .menupalette .entrees .verif i {
+  transform: scale(1.4); /*augmente la taille de l'intérieur de l'item*/
+}
+.mainrestoun .menupalette .gras {
+  /*intitulé du plat*/
   font-weight: bold;
 }
 .mainrestoun .page {
@@ -390,12 +452,36 @@ main .menus .carte .menuimagequatre {
   -webkit-background-clip: text;
   opacity: 0; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
   transition: all 200ms ease-in-out;
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  background-image: linear-gradient(to top, #9356dc, #ff79da); /*couleur du bouton*/
 }
 .mainrestoun .page:hover .fa-solid {
   /* modif de l'apparence du coeur, transition*/
   opacity: 1; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
   transform: translateY(-50%) scale(1.2); /*déplace et centre le coeur*/
+}
+
+section.comm {
+  display: grid;
+  place-items: center;
+  height: 20vh;
+}
+section.comm button {
+  /*mixin du bouton*/
+  color: white;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  transition: transform 200ms; /*vitesse du zoom*/
+  margin-top: 1.5rem;
+  cursor: pointer;
+  background-image: linear-gradient(to top, #9356dc, #ff79da); /*couleur du bouton*/
+  box-shadow: 2px 1px 7px -3px lightgrey;
+}
+section.comm button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 

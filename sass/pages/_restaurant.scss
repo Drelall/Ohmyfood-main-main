@@ -1,15 +1,26 @@
 @use "../utils/_variables"; /*mixin de box shadow*/
 @use "../utils/_colors"; /*couleurs*/
 @use "../utils/_mixins"; /*mixin gradient*/
+/*******titre du site*******/
+.fleche ::before {/* ajoute la flèche de retour*/
+  @include mixins.fleche-retour;
+  content: "\f060";/*identification de l'item sur fa*/
+  font-family: "Font Awesome 6 Free";/*pour bien voir apparaitre la fleche de retour*/
+  font-weight: 900; /*pour bien voir apparaitre la fleche de retour*/
+  position: absolute;
+  left: 1rem;
+}
 /*******image*******/
 .palette img {
   display: block;
   width: 100%;
-  height: 70vh;
+  height: 40vh;
   object-fit: cover;
-  object-position: center bottom;
+  @media (max-width: 1024px) {
+  height: 30vh;
+ }
 }
-/***titre, coeur, et carte****/
+/***restaurant****/
 .mainrestoun {
   @media (min-width: 1440px) {
     padding: 0rem 10rem;
@@ -24,49 +35,73 @@
     .sansgras {
       font-weight: normal;
       color: gray;
-    }
-  }
-  .entrees {
-    background-color: colors.$white;
-    border-radius: 1rem;
-    
-    .entre {
-      display: flex;
-      & > * {
-        align-items: flex-start;
+      text-transform: uppercase;
+      position: relative;
+      &::after {
+        /***ligne verte après le texte***/
+        content: "";
+        position: absolute;
+        top: 1.5rem;
+        left: 0rem;
+        height: 0.25rem;
+        width: 2.65rem;
+        background-color: colors.$tertiaire;
+        display: inline-block;
       }
     }
-    
-    .prix {
-      font-weight: bold;
-      margin-left: auto;
-      display:flex;
-      align-items: center;
-      margin-top: 1.2rem; /*déplace le 25euros pour l'aligner*/
+    .entrees {
+      background-color: colors.$white;
+      border-radius: 1rem;
 
-    }
-    
-    .entr {
-      padding: 1rem;
+      .entre {
+        display: flex;
+        @include mixins.base-shadow; /*border-shadow*/
+        border-radius: 1rem;
+        & > * {
+          align-items: flex-start;
+        }
+      }
 
-    }
+      .prix {
+        font-weight: bold;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        margin-top: 1.2rem; /*déplace le 25euros pour l'aligner*/
+        margin-right: 1rem;
+      }
 
-    & :hover .verif{
-      margin-right: 0;
-      opacity: 1;
-    }
-    
-    .verif {
-      background-color: colors.$tertiaire;
-      margin-right: -2.7rem;
-      width: 3rem;
-      overflow: hidden;
-      opacity :0;
-      border-radius: 0 1rem 1rem 0;
-      transition: all 0.6s;
+      .entr {
+        padding: 1rem;
+        cursor: pointer; /*change le curseur en main*/
+      }
+
+      & :hover .verif {
+        margin-right: 0;
+        opacity: 1;
+      }
+
+      .verif {
+        /*animation verte de validation*/
+        background-color: colors.$tertiaire;
+        margin-right: -2.7rem;
+        width: 3rem;
+        overflow: hidden;
+        opacity: 0;
+        border-radius: 0 1rem 1rem 0;
+        transition: all 0.6s;
+        display: grid;
+        place-items: center;
+        font-size: 1rem;
+        color: white;
+      }
+      .verif i {
+        transform: scale(1.4); /*augmente la taille de l'intérieur de l'item*/
+      }
     }
 
     .gras {
+      /*intitulé du plat*/
       font-weight: bold;
     }
   }
@@ -109,5 +144,16 @@
       opacity: 1; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
       transform: translateY(-50%) scale(1.2); /*déplace et centre le coeur*/
     }
+  }
+}
+section.comm {
+  display: grid;
+  place-items: center;
+  height: 20vh;
+
+  button {
+    @include mixins.base-bouton;
+    @include mixins.gradient;
+    @include mixins.base-shadow;
   }
 }
