@@ -16,6 +16,7 @@
       display: flex;
       gap: 2rem;
       padding: 0;
+      cursor: pointer;
       @media (max-width: 768px) {
         flex-direction: column;
       }
@@ -38,6 +39,7 @@
         bottom: 50%;
         transform: translateY(50%);
         left: -1 * variables.$variable-fonct;
+        
       }
       list-style-type: none;
       background-color: #f6f6f6;
@@ -51,6 +53,7 @@
       i.fas {
         color: colors.$purple;
         margin-right: 1rem;
+        
       }
     }
   }
