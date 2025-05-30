@@ -11,7 +11,7 @@ main {
        max-width: 1280px;
        margin: auto;
     }
-    
+    /*****************les coeurs*****************/
     & .menudescription {
       position: relative; /*déplace le coeur*/
       p,
@@ -37,9 +37,10 @@ main {
       &:hover .fa-solid {
         /* modif de l'apparence du coeur, transition*/
         opacity: 1; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
-        transform: translateY(-50%) scale(1.2); /*déplace et centre le coeur*/
+        transform: translateY(-50%) scale(1); /*déplace et centre le coeur*/
       }
     }
+
     h2 {
       margin-bottom: 2rem;
       margin-top: 2rem;

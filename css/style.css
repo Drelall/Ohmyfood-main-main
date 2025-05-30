@@ -72,8 +72,9 @@ header {
   /*mixin du bouton*/
   color: white;
   font-weight: 300;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
+  width: 15rem;
+  padding: 0.8rem 0.8rem;
+  font-size: 1rem;
   border: none;
   border-radius: 2rem;
   transition: transform 200ms; /*vitesse du zoom*/
@@ -84,8 +85,9 @@ header {
   /*mixin du bouton*/
   color: white;
   font-weight: 300;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
+  width: 15rem;
+  padding: 0.8rem 0.8rem;
+  font-size: 1rem;
   border: none;
   border-radius: 2rem;
   transition: transform 200ms; /*vitesse du zoom*/
@@ -197,6 +199,7 @@ main {
 main .menus {
   padding: 2rem 2rem;
   background-color: #f4f4f4;
+  /*****************les coeurs*****************/
 }
 main .menus .menumarge {
   max-width: 1280px;
@@ -228,7 +231,7 @@ main .menus .menudescription .fa-solid {
 main .menus .menudescription:hover .fa-solid {
   /* modif de l'apparence du coeur, transition*/
   opacity: 1; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
-  transform: translateY(-50%) scale(1.2); /*déplace et centre le coeur*/
+  transform: translateY(-50%) scale(1); /*déplace et centre le coeur*/
 }
 main .menus h2 {
   margin-bottom: 2rem;
@@ -505,8 +508,9 @@ section.comm button {
   /*mixin du bouton*/
   color: white;
   font-weight: 300;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
+  width: 15rem;
+  padding: 0.8rem 0.8rem;
+  font-size: 1rem;
   border: none;
   border-radius: 2rem;
   transition: transform 200ms; /*vitesse du zoom*/
