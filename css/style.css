@@ -211,6 +211,14 @@ main .menus .menudescription {
 main .menus .menudescription p,
 main .menus .menudescription h3 {
   padding: 0.3rem;
+  margin-left: 1rem;
+  font-size: 1rem; /*taille du texte*/
+}
+main .menus .menudescription h3 {
+  padding-top: 1rem;
+}
+main .menus .menudescription p {
+  padding-bottom: 1rem;
 }
 main .menus .menudescription i {
   font-size: 2rem; /*change la taille du coeur*/
