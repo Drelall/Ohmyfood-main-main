@@ -316,7 +316,7 @@ main .menus .carte .menuimagequatre {
   display: flex;
   flex-direction: column;
   background-color: #353535;
-  padding: 1 2rem;
+  padding: 1rem 2rem;
   color: white; /*couleur du texte*/
 }
 .basdepage h2 {
@@ -425,6 +425,7 @@ main .menus .carte .menuimagequatre {
   box-shadow: 2px 1px 7px -3px lightgrey;
   /*border-shadow*/
   border-radius: 1rem;
+  overflow: hidden; /*pour que le texte ne dépasse pas*/
 }
 .mainrestoun .menupalette .entrees .entre > * {
   align-items: flex-start;

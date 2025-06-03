@@ -59,6 +59,7 @@
         display: flex;
         @include mixins.base-shadow; /*border-shadow*/
         border-radius: 1rem;
+        overflow: hidden; /*pour que le texte ne dépasse pas*/
         & > * {
           align-items: flex-start;
         }
