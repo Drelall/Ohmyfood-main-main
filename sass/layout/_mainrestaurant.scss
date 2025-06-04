@@ -26,6 +26,8 @@ main {
       p{
         padding-bottom: 1rem;
       }
+      .coeur {
+      
       i {
         font-size: 2rem; /*change la taille du coeur*/
         position: absolute; /*déplace le coeur*/
@@ -46,6 +48,7 @@ main {
         /* modif de l'apparence du coeur, transition*/
         opacity: 1; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
         transform: translateY(-50%) scale(1); /*déplace et centre le coeur*/
+      }
       }
     }
 

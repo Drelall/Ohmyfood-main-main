@@ -122,7 +122,7 @@
         text-align: center;
       }
     }
-
+    .coeur{
     i {
       font-size: 2rem; /*change la taille du coeur*/
       position: absolute; /*déplace le coeur*/
@@ -146,6 +146,7 @@
       /* modif de l'apparence du coeur, transition*/
       opacity: 1; /*permet la transition entre chaque carte sans que le coeur s'affiche tout de suite au survol*/
       transform: translateY(-50%) scale(1); /*déplace et centre le coeur*/
+    }
     }
   }
 }
