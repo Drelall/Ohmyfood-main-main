@@ -1,13 +1,13 @@
-@keyframes quarterspin {
+@keyframes quarterspin {/* Définit une animation nommée quarterspin */
   0% {
-    transform: translateY(50%);
-    opacity: 0;
+    transform: translateY(50%);/* Déplace l'élément de 50% vers le bas au début de l'animation */
+    opacity: 0;/* L'élément est invisible au début */
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateY(0);/* L'élément revient à sa position d'origine à la fin de l'animation */
+    opacity: 1;/* L'élément devient complètement visible à la fin */
   }
 }
-@mixin use-quarterspin {
-  animation: quarterspin 2s;
+@mixin use-quarterspin { /* Déclare une mixin Sass nommée use-quarterspin */
+  animation: quarterspin 2s; /* Applique l'animation quarterspin sur 2 secondes */
 }

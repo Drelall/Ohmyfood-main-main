@@ -50,6 +50,7 @@
         display: inline-block;
       }
     }
+    /*********animation des pages restaurants*********/
     .entrees {
       @include animations.use-quarterspin;/*animation des onglets*/
       background-color: colors.$white;
@@ -78,7 +79,7 @@
         padding: 1rem;
         cursor: pointer; /*change le curseur en main*/
       }
-
+      /******************Animation de validation*****************/
       & :hover .verif {
         margin-right: 0;
         opacity: 1;
