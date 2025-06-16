@@ -201,7 +201,7 @@ main {
 main .menus {
   padding: 2rem 2rem;
   background-color: #f4f4f4;
-/*****************les coeurs*****************/
+  /*****************les coeurs*****************/
 }
 main .menus .menumarge {
   max-width: 1280px;
@@ -343,14 +343,14 @@ main .menus .carte .menuimagequatre {
 /*mixin de box shadow*/
 /*couleurs*/
 /*mixin gradient*/
-@keyframes quarterspin {
+@keyframes quarterspin { /* Définit une animation nommée quarterspin */
   0% {
-    transform: translateY(50%);
-    opacity: 0;
+    transform: translateY(50%); /* Déplace l'élément de 50% vers le bas au début de l'animation */
+    opacity: 0; /* L'élément est invisible au début */
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateY(0); /* L'élément revient à sa position d'origine à la fin de l'animation */
+    opacity: 1; /* L'élément devient complètement visible à la fin */
   }
 }
 /*mixin gradient*/
@@ -396,6 +396,7 @@ main .menus .carte .menuimagequatre {
   gap: 2rem;
   padding: 2rem;
   background-color: #f6f6f6;
+  /*********animation des pages restaurants*********/
 }
 .mainrestoun .menupalette .sansgras {
   font-weight: normal;
@@ -415,10 +416,12 @@ main .menus .carte .menuimagequatre {
   display: inline-block;
 }
 .mainrestoun .menupalette .entrees {
-  animation: quarterspin 2s;
+  /* Déclare une mixin Sass nommée use-quarterspin */
+  animation: quarterspin 2s; /* Applique l'animation quarterspin sur 2 secondes */
   /*animation des onglets*/
   background-color: #ffffff;
   border-radius: 1rem;
+  /******************Animation de validation*****************/
 }
 .mainrestoun .menupalette .entrees .entre {
   display: flex;
